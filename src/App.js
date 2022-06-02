@@ -1,7 +1,12 @@
 import logo from "./logo.svg";
 import "./App.css";
+import {db} from './firebase';
+import React, { useState, useEffect } from 'react';
+import {collection, addDoc, Timestamp} from 'firebase/firestore';
+
 
 function App() {
+  const [count, setCount] = useState(0);
   var Feed = [
     {
       id: 1,
@@ -44,7 +49,10 @@ function App() {
       "#","CarName","Brand","Mileage","Electric","Safety (Out of 17)","abcc",
   ];
   
-
+  useEffect(() => {
+    // Update the document title using the browser API
+    document.title = `You clicked ${count} times`;
+  });
   return (
     <>
       <h1 className="title-main">Car Search Data </h1>
