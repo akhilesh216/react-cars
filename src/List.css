@@ -1,0 +1,83 @@
+
+.title-main {
+    border: 2px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    margin: 5%;
+    background-color: #ecea65;
+  }
+  .cars-table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 90%;
+    margin: 5%;
+    margin-top: 1%;
+  }
+  
+  .cars-table td,
+  .cars-table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .cars-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  .cars-table tr:nth-child(odd) {
+    background-color: #f1bebe;
+  }
+  
+  .cars-table tr:hover {
+    background-color: #ddd;
+  }
+  
+  .cars-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04aa6d;
+    color: white;
+  }
+  
+  .image{
+    width: 50px;
+    
+  }
+  .addform {
+    position: relative;
+    background-color: #4CAF50;
+    border: none;
+    font-size: 18px;
+    color: #FFFFFF;
+    padding: 10px;
+    width: 200px;
+    
+    text-align: center;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .addform:after {
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+  }
+  
+  .addform:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+  }
+        
+  
+  
