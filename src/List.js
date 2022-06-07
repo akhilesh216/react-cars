@@ -4,6 +4,7 @@ import { db } from './firebase';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'
 import { Routes, Route, Link } from "react-router-dom";
+import Form from './Form'
 
 
 function List() {
@@ -15,9 +16,9 @@ function List() {
     "#", "Brand", "Mileage" ,"Electric","Safety (Out of 17)","CarName",  "Image" , "ID"
   ];
   async function getCars() {
-    let data = await axios.get('https://62991f6f7b866a90ec3722e2.mockapi.io/Cars');
-    console.log(data.data);
-    setCars(data.data);
+    let response = await axios.get('https://62991f6f7b866a90ec3722e2.mockapi.io/Cars');
+    console.log(response.data);
+    setCars(response.data);
 
 
   }
@@ -28,13 +29,14 @@ function List() {
 
     // start();
     // getCars();
-  });
+  },[]);
   return (
     <>
+    
       <h1 className="title-main">Car Search Data </h1>
       
         <nav >
-        <a class="addform" href="/add">Add</a>
+               <a class="btn btn-primary" href="/add" role="button">Add</a>
         </nav>
                    
         
@@ -77,8 +79,9 @@ else
 
         </tbody>
       </table>
-    
+      <Form/>
     </>
+    
   );
 }
 
